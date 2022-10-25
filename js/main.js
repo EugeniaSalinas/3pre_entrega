@@ -8,17 +8,7 @@ class Usuario{
 }
 }
 
-const listaUsuarios = [
-/*{
-  nombre: "eugenia salinas",
-  email: "eugesalinas8@gmail.com",
-  provincia: "Mendoza",
-  localidad: "capital",
-  direccion: "suipacha 123",
-
-}*/
-
-];
+const listaUsuarios = [];
 
 
 

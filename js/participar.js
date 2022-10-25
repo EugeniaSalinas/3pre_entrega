@@ -9,14 +9,10 @@ let nombreIngresado = document.getElementById("nombreFormMateriales");
 
 
 
-
-
 const validarNombre = () => {
 
     listaUsuarios.forEach ((persona)=> {
         console.log ((persona.nombre))
-
-
         
          if(listaUsuarios.some((persona) => persona.nombre == nombreIngresado.value)){
         console.log("pertenece")
@@ -62,28 +58,6 @@ const abrir = document.getElementById("btnabrir");
     //Mostrar boton de VER MI FICHA cuando se envie el formulario
     abrir.style.opacity =`1`;
 }
-
-
-
-
-//let materialjuntado = parseFloat(document.getElementById ("materialVidrio").value);
-
-//let materialNuevo = new Materiales (materialjuntado,cuantoEnKg);
-//listaMateriales.push(materialNuevo);
-//Voy a guardar los materiales en local storage en un array 
-//localStorage.setItem ("materiales", JSON.stringify(listaMateriales))
-
-
-
-//Esto se comento y se abrevio con lo del codigo del array de arriba
-/*if(localStorage.getItem("materiales")== null ){
-    listaMateriales.push(materialNuevo)
-    localStorage.setItem("materiales", JSON.stringify(listaMateriales))
-} else {
-    const listaStorage = JSON.parse(localStorage.getItem ("materiales"))
-    listaMateriales.push(materialNuevo);
-    localStorage.setItem ("materiales", JSON.stringify(listaStorage))
-}*/
 
 
 //-----------Codigo para VER MI FICHA-------------------

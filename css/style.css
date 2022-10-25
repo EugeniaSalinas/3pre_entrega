@@ -4,13 +4,6 @@
     box-sizing: border-box;
 }
 
-/*Regla font-face*/
-@font-face {
-    font-family: 'Afterglow';
-    src: url('tipos/Afterglow/Afterglow-Regular.ttf');
-}
-
-
 
 
 /*Menu*/
