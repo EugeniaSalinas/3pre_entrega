@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participar</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="../imgs/iconoClasifica.svg" type="Icono Clasifica">
+    <meta property="og:Image" content="../imgs/iconoClasifica.svg">
+</head>
+
+<header class="container-fluid">
+    <!--Inicio Menu-->
+    <nav>
+            <div id="navbarNav">
+              <ul class="menu">
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="#Participa">Participa</a></li>
+              </ul>    
+           </div>
+    </nav>
+ <!--Fin Menu-->
+</header>
+
+
+<body>
+
+    <form id ="formulario" action="">
+        
+           
+              
+              <input type="text" id="nombreFormMateriales" name="user_name" class="form1" placeholder="Ingresa tu Nombre" required>
+            
+            <h2>Materiales</h2>
+            
+              <p class="tipoMaterial">VIDRIO</p>
+              <input type="number" id="materialVidrio" class="form1"placeholder="0">
+            
+            
+              <p class="tipoMaterial">CARTÓN</p>
+              <input type="number" id="materialCarton" class="form1"placeholder="0">
+            
+            
+              <p class="tipoMaterial">PAPEL</p>
+              <input type="number" id="materialPapel" class="form1"placeholder="0">
+            
+            
+              <p class="tipoMaterial">PLÁSTICO</p>
+              <input type="number" id="materialPlastico" class="form1"placeholder="0">
+            
+              <p class="tipoMaterial">OTROS</p>
+              <input type="number" id="materialOtros" class="form1" placeholder="0">
+            
+              
+           
+           <!--Boton-->         
+          <button type="submit" class="btnform" id="btnbtn">Enviar formulario</button>
+          <button type="submit" class="btnform2" id="btnabrir">Ver mi ficha</button>
+    </form>
+
+ <div id="fondoFicha" class="fondoRespuesta">   
+    <div class="contenedorFicha" id="contenedorRespuesta">
+        <h2> Has reciclado...</h2>
+          <h3>Vidrio:</h3>
+          <p id="cantidadRespuestaVidrio">0</p>
+          <h3>Cartón:</h3>
+          <p id="cantidadRespuestaCarton">0</p>
+          <h3>Papel:</h3>
+          <p id="cantidadRespuestaPapel">0</p>
+          <h3>Plástico:</h3>
+          <p id="cantidadRespuestaPlastico">0</p>
+          <h3>Otros materiales:</h3>
+          <p id="cantidadRespuestaOtros">0</p>
+          <button id="btncerrar" class="btnform">Cerrar</button>
+    </div>
+
+</div>
+    <script src="../js/participar.js"></script>
+</body>
+</html>
