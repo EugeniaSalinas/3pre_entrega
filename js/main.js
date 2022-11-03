@@ -8,7 +8,44 @@ class Usuario{
 }
 }
 
-const listaUsuarios = [];
+const listaUsuarios = [{
+  nombre: "Juan Perez",
+  password: 1234,
+  email: "juanp@gmail.com",
+  provincia: "Chaco",
+  localidad: "ciudad",
+  direccion: "avenida 123",
+}];
+
+
+//Para usuarios que ya tienen una sesión
+const validarUsuario = () => {
+let nombreUsuario = document.getElementById("nombreUsuario").value;
+let contrasenia = document.getElementById ("password").value;
+
+if(listaUsuarios.some((persona) => persona.nombre == nombreUsuario) && (nombreUsuario == "Juan Perez")){
+  alert("Ingresaste")
+  
+  }else { 
+      alert("Usuario Incorrecto")
+  }
+
+if((contrasenia == 1234)&& (contrasenia.length < 8)){
+  alert("contraseniaCorrecta")
+} else {
+  alert("contraseña Incorrecta")
+}
+}
+
+
+let btnIngresar = document.getElementById("botoningresar");
+
+btnIngresar.onclick = (e)=> {
+  e.preventDefault();
+  validarUsuario();
+ 
+}
+
 
 
 
@@ -23,7 +60,7 @@ const agregarUsuario = () =>{
      
       
   let usuarioNuevo = new Usuario (nombre,email, provincia, localidad, direccion);
-  if ((nombre.value ="") || (email.value ="") || (localidad.value ="") || (direccion.value ="")){
+  if ((nombre =="") || (email =="") || (localidad =="") || (direccion =="")){
     alert ("Recuerda completar todos los campos")
   } else{
   alert("Te has inscripto")

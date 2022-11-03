@@ -31,7 +31,7 @@
         <nav>
                 <div id="navbarNav">
                   <ul class="menu">
-                      <li><a href="#Inicio">Inicio</a></li>
+                      <li><a href="#Inicio">Iniciar sesión</a></li>
                       <li><a href="participar.html">Participa</a></li>
                   </ul>    
                </div>
@@ -39,13 +39,23 @@
      <!--Fin Menu-->
     </header>
 
+      <!--Formulario para ingresar si ya tenes usuario-->
+          <form action="">
+      <input type="text" id="nombreUsuario" class="form1" placeholder="Nombre y Apellido">
+      <input type="text" name="password" id="password" class="form1" placeholder="Constraseña">
+      <button type="submit" class="btnform" id="botoningresar">Ingresar</button>
+      <p><a href="#nombre">¿No tienes usuario? Inscribite ahora</a></p>
+          </form>
 
 
-      <!--Inicio Formulario-->
-      <form action="">
-        
+
+      <!--Inicio Formulario Inscripcion-->
+      <section id="seccionForm">
+      <form action="">        
             
-              <input type="text" id="nombre" name="user_name" class="form1" placeholder="Nombre y Apellido">
+              <input type="text" id="nombre" name="user_name" class="form1" placeholder="Nombre y Apellido" required>
+
+              <input type="text" id="password" name="password" class="form1" placeholder="Contraseña" required>
                    
               <input type="email" id="mail" name="user_mail"class="form1" placeholder="Correo Electrónico">
             
@@ -76,13 +86,12 @@
 
               <input type="text" id="localidad" name="user_name" class="form1" placeholder="Localidad">
             
-              <input type="text" id="direccion" name="user_name" class="form1" placeholder="Dirección">
-              
+              <input type="text" id="direccion" name="user_name" class="form1" placeholder="Dirección">              
            
            <!--Boton-->         
           <button type="submit" class="btnform" id="botoninscripcion">Inscribirme</button>
     </form>
-
+  </section>
  <!--Final Formulario-->
 
     
