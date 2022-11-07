@@ -29,8 +29,9 @@ let respuestaPassword = document.getElementById("respuestaPassword");
 let entrar = false
   if(listaUsuarios.some((persona) => persona.nombre == nombreUsuario) && (nombreUsuario == "Juan Perez")){
   entrar = true
-  respuestaUsuarioNombre.classList.add(`mostrarExito`);
+  
   respuestaUsuarioNombre.innerHTML = `<p> Usuario correcto </p>`
+  respuestaUsuarioNombre.classList.add(`mostrarExito`);
   
   }else { 
     entrar = false
@@ -55,17 +56,15 @@ let entrar = false
     
     Swal.fire({
       title: 'Bienvenido',
-      text: 'Do you want to continue',
       icon: 'success',
-      confirmButtonText: 'Cool'
+      confirmButtonText: 'Aceptar'
     })
   } else {
     Swal.fire({
       icon: 'error',
-      title: 'Oops...',
-      text: 'Something went wrong!',
-      footer: '<a href="">Why do I have this issue?</a>'
-    })
+      title: 'Usuario y contraseña incorrectos',
+      text: '¿Primera vez? Inscribite!',
+        })
   }
 
 }
@@ -96,9 +95,18 @@ const agregarUsuario = () =>{
       
   let usuarioNuevo = new Usuario (nombre,password, email, provincia, localidad, direccion);
   if ((nombre =="") || (password =="")|| (email =="") || (localidad =="") || (direccion =="")){
-    alert ("Recuerda completar todos los campos")
+    Swal.fire({
+      icon: 'error',
+      title: 'Recuerda completar todos los campos',
+   
+        })
   } else{
-  alert("Te has inscripto")
+    Swal.fire({
+      title: `Te damos la bienvenida ${nombre}`,
+      icon: 'success',
+      text: 'Ahora puedes particiar de las rutas',
+      confirmButtonText: 'Aceptar'
+    })
   listaUsuarios.push(usuarioNuevo);
   localStorage.setItem("usuarios", JSON.stringify(listaUsuarios));
 }

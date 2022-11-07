@@ -76,7 +76,7 @@ h1{
   color:#5fa71d;
 }
 
-p{
+.p_texto{
   font-family: 'Roboto', sans-serif;  
   font-size: 20px;
   color:#5c5c5c;
@@ -181,6 +181,8 @@ p{
 }
 .parraf1{
   color:#133f13;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
 
 }
 
@@ -234,10 +236,10 @@ p{
   
   .texto {
     font-family: Arial, Helvetica, sans-serif;
-    color:rgba(110, 110, 110, 0.863);
+    color:rgba(255, 255, 255, 0.863);
     list-style-type: none;
     text-decoration: none;
-   
+   margin-top: 20px;
   }
   .texto:hover{
     color:rgba(4, 182, 34, 0.863)
@@ -246,7 +248,7 @@ p{
   /*Respuesta en caso que el usuario o contraseña esté mal*/
   .mostrarError{
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(221, 8, 8);
+    color: rgb(235, 107, 107);
     font-size: 14px;
     text-align: center;
     pointer-events: auto;
@@ -301,11 +303,48 @@ p{
     margin: 10px;
   }
 
-/*Cuando le da click al campo*/
-  .form1:focus{
-    
+  /*Cuando le da click al campo*/
+  .form1:focus{    
     border: solid 2px #91C363;
   }
+
+  .tituloFormulario{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #133f13c2;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+
+  }
+
+  .form2 {
+    width: 500px;
+    margin: 20px auto;
+    background-color:#133f13c2;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+   
+  }
+
+ /*Cuando le da click al campo*/
+ .form2:focus{    
+  border: solid 2px #91C363;
+}
+
+  .input1 {
+    border: solid 1px #999999;    
+    padding: 15px;
+    width: 300px;
+    margin: 10px;
+    background-color:#133f13c2;
+    border:none;
+    border-radius: 10px;
+    color: #ffffff;
+  }
+ 
 
   .btnform {
     padding: 15px;
