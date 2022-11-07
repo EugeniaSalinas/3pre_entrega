@@ -1,6 +1,7 @@
 class Usuario{
-  constructor(nombre,email, provincia, localidad, direccion){
+  constructor(nombre,password,email, provincia, localidad, direccion){
   this.nombre = nombre;
+  this.password = password;
   this.email = email;
   this.provincia = provincia;
   this.localidad = localidad;
@@ -22,19 +23,51 @@ const listaUsuarios = [{
 const validarUsuario = () => {
 let nombreUsuario = document.getElementById("nombreUsuario").value;
 let contrasenia = document.getElementById ("password").value;
+let respuestaUsuarioNombre = document.getElementById("respuestaNombreUsuario");
+let respuestaPassword = document.getElementById("respuestaPassword");
 
-if(listaUsuarios.some((persona) => persona.nombre == nombreUsuario) && (nombreUsuario == "Juan Perez")){
-  alert("Ingresaste")
+let entrar = false
+  if(listaUsuarios.some((persona) => persona.nombre == nombreUsuario) && (nombreUsuario == "Juan Perez")){
+  entrar = true
+  respuestaUsuarioNombre.classList.add(`mostrarExito`);
+  respuestaUsuarioNombre.innerHTML = `<p> Usuario correcto </p>`
   
   }else { 
-      alert("Usuario Incorrecto")
+    entrar = false
+    respuestaUsuarioNombre.classList.add(`mostrarError`);
+    respuestaUsuarioNombre.innerHTML = `<p> Usuario Incorrecto </p>`
+    
   }
 
-if((contrasenia == 1234)&& (contrasenia.length < 8)){
-  alert("contraseniaCorrecta")
-} else {
-  alert("contraseña Incorrecta")
-}
+  if((contrasenia == 1234)&& (contrasenia.length < 8)){
+    entrar = true
+    respuestaPassword.classList.add(`mostrarExito`);
+    respuestaPassword.innerHTML = `<p> Contraseña Correcta </p>`
+  
+  } else {
+    entrar = false
+    respuestaPassword.classList.add(`mostrarError`);
+    respuestaPassword.innerHTML = `<p> Contraseña Incorrecta </p>`
+    
+  }
+
+  if (entrar){
+    
+    Swal.fire({
+      title: 'Bienvenido',
+      text: 'Do you want to continue',
+      icon: 'success',
+      confirmButtonText: 'Cool'
+    })
+  } else {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+      footer: '<a href="">Why do I have this issue?</a>'
+    })
+  }
+
 }
 
 
@@ -43,6 +76,7 @@ let btnIngresar = document.getElementById("botoningresar");
 btnIngresar.onclick = (e)=> {
   e.preventDefault();
   validarUsuario();
+  
  
 }
 
@@ -53,14 +87,15 @@ btnIngresar.onclick = (e)=> {
 //FUNCION PARA AGREGAR USUARIOS
 const agregarUsuario = () =>{
   let nombre = document.getElementById("nombre").value;
+  let password = document.getElementById("password2").value;
   let email = document.getElementById("mail").value;
   let provincia = document.getElementById("provincia").value;  
   let localidad = document.getElementById("localidad").value;
   let direccion = document.getElementById("direccion").value;
      
       
-  let usuarioNuevo = new Usuario (nombre,email, provincia, localidad, direccion);
-  if ((nombre =="") || (email =="") || (localidad =="") || (direccion =="")){
+  let usuarioNuevo = new Usuario (nombre,password, email, provincia, localidad, direccion);
+  if ((nombre =="") || (password =="")|| (email =="") || (localidad =="") || (direccion =="")){
     alert ("Recuerda completar todos los campos")
   } else{
   alert("Te has inscripto")
@@ -79,3 +114,5 @@ inscribir.onclick = (e)=> {
   agregarUsuario();
  
 }
+
+

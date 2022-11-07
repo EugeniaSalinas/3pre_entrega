@@ -1,0 +1,26 @@
+[
+    { "nombre": "Magu Inteligente",
+       "img":"../imgs/feliz.png",
+       "descripcion": "Magu respresenta nuestra Semilla de Mejora, estamos contentos porque ya somos más de 100 casas que clasifican sus residuos!"
+    },
+
+    { "nombre": "Magu Triste",
+      "img":"../imgs/triste.png",
+      "descripcion": "Muchas veces recibimos materiales mezclados, o manchados, y ya no sirven para reciclarse! Por favor, cuida la disposición de tus materiales"
+    },
+
+    { "nombre": "Magu Taller",
+      "img":"../imgs/taller.png",
+      "descripcion": "Trabajamos constantemente para poder arreglar los vehiculos de nuestros recuperadores!"
+    },
+
+    { "nombre": "Magu Enseñando",
+      "img":"../imgs/smart.png",
+      "descripcion": "En nuestras redes sociales educamos acerca del reciclaje y nuestro ambiente...Seguinos!"
+    },
+
+    { "nombre": "Magu Sorprendida",
+      "img":"../imgs/sorpresa.png",
+      "descripcion": "La humanidad, necesitaría 1,75 planetas para satisfacer sus demandas de recursos naturales. . Debemos cambiar nuestra forma de vida...te sumas?"
+    }
+]

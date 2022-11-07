@@ -18,7 +18,12 @@ const validarNombre = () => {
         console.log("pertenece")
         
         }else { 
-            alert("No te has inscripto!")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Debes inscribirte!',
+                footer: '<a href="ingresar.html">Inicia Sesión o Inscribite</a>'
+              })
         }
     })
   
@@ -65,6 +70,7 @@ const abrir = document.getElementById("btnabrir");
    
     const contenedorFicha = document.getElementById("fondoFicha")
     const cerrar = document.getElementById("btncerrar")
+    const titulo = document.getElementById("tituloFicha")
 
 //-------------Evento abrir ficha-----------------------
     abrir.addEventListener("click", (e)=> {
@@ -95,10 +101,17 @@ const abrir = document.getElementById("btnabrir");
     plasticoRespuesta.innerHTML = `<p> ${cantidadPlastico + 0} kg</p>`
     otrosRespuesta.innerHTML = `<p> ${cantidadOtros + 0} kg</p>`
    
+
+    titulo.innerHTML = `Hola ${nombreIngresado.value}! Has reciclado...`
 })
 
+// Cerrar Ficha
 cerrar.addEventListener("click", (e)=> {
     e.preventDefault();
     contenedorFicha.classList.remove(`mostrar`);
 })
+
+
+
+
 

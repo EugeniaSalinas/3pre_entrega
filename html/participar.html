@@ -18,7 +18,8 @@
     <nav>
             <div id="navbarNav">
               <ul class="menu">
-                  <li><a href="index.html">Iniciar sesión</a></li>
+                <li><a href="index.html">Home</a></li>
+                  <li><a href="ingresar.html">Iniciar sesión</a></li>
                   <li><a href="#Participa">Participa</a></li>
               </ul>    
            </div>
@@ -29,56 +30,83 @@
 
 <body>
 
-    <form id ="formulario" action="">
-        
-           
-              
-              <input type="text" id="nombreFormMateriales" name="user_name" class="form1" placeholder="Ingresa tu Nombre" required>
-            
-            <h2>Materiales</h2>
-            
-              <p class="tipoMaterial">VIDRIO</p>
-              <input type="number" id="materialVidrio" class="form1"placeholder="0">
-            
-            
-              <p class="tipoMaterial">CARTÓN</p>
-              <input type="number" id="materialCarton" class="form1"placeholder="0">
-            
-            
-              <p class="tipoMaterial">PAPEL</p>
-              <input type="number" id="materialPapel" class="form1"placeholder="0">
-            
-            
-              <p class="tipoMaterial">PLÁSTICO</p>
-              <input type="number" id="materialPlastico" class="form1"placeholder="0">
-            
-              <p class="tipoMaterial">OTROS</p>
-              <input type="number" id="materialOtros" class="form1" placeholder="0">
-            
-              
-           
-           <!--Boton-->         
-          <button type="submit" class="btnform" id="btnbtn">Enviar formulario</button>
-          <button type="submit" class="btnform2" id="btnabrir">Ver mi ficha</button>
-    </form>
-
+  <section class="contenedor6">
+    <div class="contenedor6_info" >
+      <h3 class="titleh3">¿Cómo completar el formulario?</h3>
+      <img src="../imgs/Materiales.png" alt="" width="100%">
+      <p class="parraf1">Queremos que sepas que las rutas de recuperación de materiales clasificados las
+        realizamos en función de la cercanía entre los puntos y la cantidad de materiales;
+        ¡para lograr darle realmente una mejora al trabajo de quienes recuperan!</p>
+    </div>
+        <div>
+            <form id ="formulario" action="">
+                
+                  
+                      
+                      <input type="text" id="nombreFormMateriales" name="user_name" class="form1" placeholder="Ingresa tu Nombre" required>
+                    
+                    <h2>Materiales</h2>
+                    
+                      <p class="tipoMaterial">VIDRIO</p>
+                      <input type="number" id="materialVidrio" class="form1"placeholder="0">
+                    
+                    
+                      <p class="tipoMaterial">CARTÓN</p>
+                      <input type="number" id="materialCarton" class="form1"placeholder="0">
+                    
+                    
+                      <p class="tipoMaterial">PAPEL</p>
+                      <input type="number" id="materialPapel" class="form1"placeholder="0">
+                    
+                    
+                      <p class="tipoMaterial">PLÁSTICO</p>
+                      <input type="number" id="materialPlastico" class="form1"placeholder="0">
+                    
+                      <p class="tipoMaterial">OTROS</p>
+                      <input type="number" id="materialOtros" class="form1" placeholder="0">
+                    
+                      
+                  
+                  <!--Boton-->         
+                  <button type="submit" class="btnform" id="btnbtn">Enviar formulario</button>
+                  <button type="submit" class="btnform2" id="btnabrir">Ver mi ficha</button>
+            </form>
+          </div>
+</section>
+    <!-- Ficha respuesta -->
  <div id="fondoFicha" class="fondoRespuesta">   
     <div class="contenedorFicha" id="contenedorRespuesta">
-        <h2> Has reciclado...</h2>
-          <h3>Vidrio:</h3>
-          <p id="cantidadRespuestaVidrio">0</p>
-          <h3>Cartón:</h3>
-          <p id="cantidadRespuestaCarton">0</p>
-          <h3>Papel:</h3>
-          <p id="cantidadRespuestaPapel">0</p>
-          <h3>Plástico:</h3>
-          <p id="cantidadRespuestaPlastico">0</p>
-          <h3>Otros materiales:</h3>
-          <p id="cantidadRespuestaOtros">0</p>
+        <h2 id="tituloFicha"> Has reciclado...</h2>
+        <ul>
+            <li>
+            <h3>Vidrio:</h3>
+            <p id="cantidadRespuestaVidrio">0</p></li>
+            <li>
+            <h3>Cartón:</h3>
+            <p id="cantidadRespuestaCarton">0</p></li>
+            <li>
+            <h3>Papel:</h3>
+            <p id="cantidadRespuestaPapel">0</p></li>
+            <li>
+            <h3>Plástico:</h3>
+            <p id="cantidadRespuestaPlastico">0</p></li>
+            <li>
+            <h3>Otros materiales:</h3>
+            <p id="cantidadRespuestaOtros">0</p></li>
+        </ul>
           <button id="btncerrar" class="btnform">Cerrar</button>
     </div>
 
 </div>
+
+
+
+
+
+
+    <!--LIBRERIA, SIEMPRE VAN ANTES DE NUESTRO JS-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     <script src="../js/participar.js"></script>
 </body>
 </html>
