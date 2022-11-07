@@ -80,9 +80,6 @@ btnIngresar.onclick = (e)=> {
 }
 
 
-
-
-
 //FUNCION PARA AGREGAR USUARIOS
 const agregarUsuario = () =>{
   let nombre = document.getElementById("nombre").value;
