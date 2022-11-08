@@ -38,7 +38,7 @@ nombreIngresado.onchange = (e) =>{
 
 
 
-//Traer cada llenado de formulario a mi js...document.get...
+//Traer cada llenado de formulario a mi js...
 
 
 let boton = document.getElementById("btnbtn");
@@ -102,7 +102,7 @@ const abrir = document.getElementById("btnabrir");
     otrosRespuesta.innerHTML = `<p> ${cantidadOtros + 0} kg</p>`
    
 
-    titulo.innerHTML = `Hola ${nombreIngresado.value}! Has reciclado...`
+    titulo.innerHTML = `Hola ${nombreIngresado.value}! En dos días buscaremos tus materiales...Has reciclado...`
 })
 
 // Cerrar Ficha

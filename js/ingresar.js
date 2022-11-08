@@ -19,7 +19,8 @@ const listaUsuarios = [{
 }];
 
 
-//Para usuarios que ya tienen una sesión
+//--------Para usuarios que ya tienen una sesión---------
+
 const validarUsuario = () => {
 let nombreUsuario = document.getElementById("nombreUsuario").value;
 let contrasenia = document.getElementById ("password").value;
@@ -80,7 +81,8 @@ btnIngresar.onclick = (e)=> {
 }
 
 
-//FUNCION PARA AGREGAR USUARIOS
+//-----FUNCION PARA AGREGAR USUARIOS-----
+
 const agregarUsuario = () =>{
   let nombre = document.getElementById("nombre").value;
   let password = document.getElementById("password2").value;

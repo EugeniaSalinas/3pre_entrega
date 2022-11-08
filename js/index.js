@@ -7,23 +7,10 @@ const botonMaguTriste = document.getElementById("botonMaguTriste");
 const botonMagutrabajo = document.getElementById("botonMaguTrabajo");
 const botonMaguSmart = document.getElementById("botonMaguSmart");
 const botonMaguSorpresa = document.getElementById("botonMaguSorpresa");
-//const fondoPruebaFetch = document.getElementsByClassName("fondoFetch")
 const pruebaFetch = document.getElementById("fondoFetch")
 
 
 
-/*const mostrarMagus = () => {
-    fetch("../imagenes.json")
-        .then(response => response.json())
-        .then (result => {
-            const imgsMagu = result;
-            imgsMagu.forEach(imagen => {
-                const cardMagu = document.createElement('img')
-                cardMagu.src = imagen.img
-                pruebaFetch.append(cardMagu)
-            })
-        })
-}*/
 
 
 //----Barra de progreso----
@@ -47,6 +34,7 @@ const magu = document.createElement('img')
 const description =  document.createElement('p')
 
 
+//------Aparicion de cada tarjeta segun click realizado-----
 
 botonMaguFeliz.onclick = () => {
 
@@ -60,11 +48,6 @@ botonMaguFeliz.onclick = () => {
                 magu.width = 300            
                 description.textContent = result[0].descripcion
     
-                /*const btnCerrar = document.createElement('button')
-                btnCerrar.innerHTML = "Cerrar"
-                btnCerrar.id ="bntCerrarFetch"
-    
-                cardMagu.append(magu,description, btnCerrar)*/
                 cardMagu.append(magu,description)
                 pruebaFetch.append(cardMagu)            
             }) 
